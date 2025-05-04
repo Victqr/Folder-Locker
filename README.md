@@ -42,10 +42,6 @@
 
 ---
 
-## 📸 
-
- 
-👉 **[imgur.com/a/EknUcvT]([https://imgur.com/a/EknUcvT](https://imgur.com/WB1xE9L))**
 
 <p align="center">
   <img src="https://i.imgur.com/l6Qb1Vg.png" width="600"><br>
