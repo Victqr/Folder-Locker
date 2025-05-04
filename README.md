@@ -1,4 +1,4 @@
-<h1 align="center">🔐 Folder Locker (WIP)</h1>
+<h1 align="center">🔐 Folder Locker</h1>
 
 <p align="center">
   <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" width="180"/>
@@ -32,12 +32,12 @@
 
 ---
 
-## ⚠️ Important
+## ⚠️ Important Notice
 
 > 🚧 **Work in Progress – Use at your own risk!**  
-> This app is still under development and may contain bugs.  
-> Do **not use it for sensitive or irreplaceable files without a backup.**  
-> Files can be **irreversibly damaged** if unlocking fails or the app crashes.  
+> This app is still in development and may contain bugs.  
+> **Do NOT use it for sensitive or irreplaceable files without backup.**  
+> Files may be **irreversibly damaged** if something goes wrong.  
 > You are fully responsible for your own data.
 
 ---
