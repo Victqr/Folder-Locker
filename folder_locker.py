@@ -38,7 +38,7 @@ class FolderLockerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.geometry(f"{APP_WIDTH}x{APP_HEIGHT}")
-        self.title("🔒 SSD Folder Locker")
+        self.title("🔒 Folder Locker")
         if os.path.exists("appicon.ico"):
             self.iconbitmap("appicon.ico")
         self.resizable(False, False)
