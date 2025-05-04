@@ -14,7 +14,6 @@ APP_WIDTH = 900
 APP_HEIGHT = 600
 USERS_FILE = "users.json"
 
-# Functies voor wachtwoordbeheer en configuratie
 def hash_password(pw): return hashlib.sha256(pw.encode()).hexdigest()
 
 def generate_key(password: str) -> bytes:
@@ -47,17 +46,15 @@ class FolderLockerApp(ctk.CTk):
         self.password = None
         self.folder_list = []
 
-        # Voeg de on_close methode toe hier
         self.protocol("WM_DELETE_WINDOW", self.on_close)
 
         self.fade_in()
         self.show_login()
 
     def on_close(self):
-        # Acties bij het sluiten van het venster (zoals het vergrendelen van mappen)
         if self.folder_list:
-            self.lock_all()  # Vergrendel alle mappen voordat de app sluit
-        self.destroy()  # Sluit de applicatie netjes af
+            self.lock_all() 
+        self.destroy()  
 
     def fade_in(self):
         self.attributes("-alpha", 0.0)
@@ -73,28 +70,21 @@ class FolderLockerApp(ctk.CTk):
     def show_login(self):
         self.clear()
 
-        # Centraal frame met de blauwe achtergrond en ronde hoeken, kleinere hoogte en bredere breedte
-        frame = ctk.CTkFrame(self, corner_radius=20, fg_color="#34495e", width=380, height=360)  # Frame hoogte aangepast
-        frame.place(relx=0.5, rely=0.5, anchor="center")  # Centraal plaatsen
+        frame = ctk.CTkFrame(self, corner_radius=20, fg_color="#34495e", width=380, height=360)  
+        frame.place(relx=0.5, rely=0.5, anchor="center")  
 
-        # Titel: Login, vetgedrukt en groter
         ctk.CTkLabel(frame, text="Login", font=("Arial", 24, "bold"), text_color="#ecf0f1").pack(pady=10)
 
-        # Gebruikersnaam invoerveld, kleiner dan voorheen
-        self.login_username = ctk.CTkEntry(frame, placeholder_text="Gebruikersnaam", width=320, height=35, corner_radius=10)  # Kleinere hoogte
+        self.login_username = ctk.CTkEntry(frame, placeholder_text="Gebruikersnaam", width=320, height=35, corner_radius=10) 
         self.login_username.pack(pady=8)
 
-        # Wachtwoord invoerveld, kleiner dan voorheen
-        self.login_password = ctk.CTkEntry(frame, show="*", placeholder_text="Wachtwoord", width=320, height=35, corner_radius=10)  # Kleinere hoogte
+        self.login_password = ctk.CTkEntry(frame, show="*", placeholder_text="Wachtwoord", width=320, height=35, corner_radius=10)  
         self.login_password.pack(pady=8)
 
-        # Login knop, kleinere hoogte en passend bij het frame
         ctk.CTkButton(frame, text="Login", width=320, height=45, command=self.login, fg_color="#2980b9", hover_color="#3498db", corner_radius=15).pack(pady=12)
 
-        # Registreren knop, kleinere hoogte en passend bij het frame
         ctk.CTkButton(frame, text="Nog geen account? Registreer", width=320, height=45, command=self.show_register, fg_color="#27ae60", hover_color="#2ecc71", corner_radius=15).pack(pady=10)
 
-        # Extra tekst onder de knoppen, zelfde stijl als profielpagina
         ctk.CTkLabel(frame, text="Of gebruik een bestaand account", text_color="#bdc3c7", font=("Arial", 12)).pack(pady=8)
 
 
@@ -172,7 +162,6 @@ class FolderLockerApp(ctk.CTk):
         self.folder_box = ctk.CTkTextbox(self.main_frame, width=600, height=150, state="disabled", corner_radius=10)
         self.folder_box.pack(pady=(5, 15))
 
-        # Zorg ervoor dat de unlock_dropdown goed is geïnitialiseerd
         self.unlock_dropdown = ctk.CTkComboBox(self.main_frame, values=[], width=400)
         self.unlock_dropdown.set("Selecteer folder om te unlocken")
         self.unlock_dropdown.pack(pady=5)
@@ -185,7 +174,6 @@ class FolderLockerApp(ctk.CTk):
         ctk.CTkButton(button_frame, text="Unlock alles", command=self.unlock_all).grid(row=1, column=1, padx=10, pady=5)
         ctk.CTkButton(button_frame, text="Lock alles", command=self.lock_all).grid(row=2, column=0, columnspan=2, pady=(10, 5))
 
-        # Nu wordt de folder lijst correct geladen na de initialisatie van de dropdown
         self.refresh_folder_display()
 
     def show_profile(self):
@@ -195,7 +183,6 @@ class FolderLockerApp(ctk.CTk):
 
         ctk.CTkLabel(frame, text="Profielinstellingen", font=("Arial", 20), text_color="#ecf0f1").pack(pady=10)
 
-        # Profielfoto
         if self.user.get("photo") and os.path.exists(self.user["photo"]):
             img = Image.open(self.user["photo"]).resize((100, 100))
             img = ImageOps.fit(img, (100, 100), centering=(0.5, 0.5))
@@ -204,20 +191,16 @@ class FolderLockerApp(ctk.CTk):
             label.image = photo
             label.pack(pady=10)
 
-        # Gebruikersnaam wijziging
         name_entry = ctk.CTkEntry(frame, placeholder_text="Nieuwe gebruikersnaam (optioneel)", width=300)
         name_entry.pack(pady=10)
         
-        # Wachtwoord wijziging
         pass_entry = ctk.CTkEntry(frame, show="*", placeholder_text="Nieuw wachtwoord (optioneel)", width=300)
         pass_entry.pack(pady=10)
         
-        # Thema wijziging
         theme_box = ctk.CTkComboBox(frame, values=["dark", "light", "system"], width=300)
         theme_box.set(self.user.get("theme", "dark"))
         theme_box.pack(pady=10)
 
-        # Profielfoto kiezen
         def choose_photo():
             path = filedialog.askopenfilename(filetypes=[("Afbeeldingen", "*.jpg *.png")])
             if path:
@@ -229,7 +212,6 @@ class FolderLockerApp(ctk.CTk):
 
         ctk.CTkButton(frame, text="Wijzig profielfoto", command=choose_photo, width=200, fg_color="#8e44ad", hover_color="#9b59b6").pack(pady=10)
 
-        # Wijzigingen toepassen
         def apply_changes():
             new_name = name_entry.get().strip().lower()
             new_pass = pass_entry.get().strip()
