@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>Secure and lock your folders in style — locally, safely, and without hassle.</b><br>
-  <i>Developed with 💙 by <a href="https://github.com/Victqr">@Victr L.</a></i>
+  <i>Developed with 💙 by <a href="https://github.com/Victqr">@Victor L</a></i>
 </p>
 
 ---
