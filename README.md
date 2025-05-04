@@ -45,7 +45,7 @@
 ## 📸 Screenshot
 
 <p align="center">
-  <img src="https://i.imgur.com/JelUuP8.png" width="250"><br>
+  <img src="https://imgur.com/a/EknUcvT" width="250"><br>
   <i>Clean, veilig en visueel aantrekkelijk 💻✨</i>
 </p>
 
