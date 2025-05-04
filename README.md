@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <b>Beveilig en vergrendel je folders met stijl — lokaal, veilig, en zonder gedoe.</b><br>
-  <i>Ontwikkeld met 💙 door <a href="https://github.com/Victqr">@Victqr</a></i>
+  <b>Secure and lock your folders in style — locally, safely, and without hassle.</b><br>
+  <i>Developed with 💙 by <a href="https://github.com/Victqr">@Victqr</a></i>
 </p>
 
 ---
@@ -20,30 +20,30 @@
 
 ## ✨ Features
 
-✅ **Registratie & Login**  
-✅ **AES Encryptie (via Fernet)**  
-✅ **Folder Lock & Unlock**  
-✅ **Custom UI met Thema's**  
-✅ **Profielfoto's per gebruiker**  
-✅ **Automatisch locken bij afsluiten**  
-✅ **Stijlvolle animaties**  
+✅ **User registration & login**  
+✅ **AES encryption (via Fernet)**  
+✅ **Folder lock & unlock**  
+✅ **Custom UI with themes**  
+✅ **Profile pictures per user**  
+✅ **Automatic locking on exit**  
+✅ **Modern animations**  
 
-> 🎨 Gebouwd met [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) voor een moderne look & feel!
-
----
-
-## ⚠️ Belangrijk
-
-> 🚧 **Work in Progress – Gebruik op eigen risico!**  
-> Deze app is nog in ontwikkeling en kan bugs bevatten.  
-> Gebruik het **niet voor gevoelige of onmisbare bestanden zonder back-up.**  
-> Bestanden kunnen **onherstelbaar beschadigd raken** bij foutieve unlock of bij crash.  
-> Jij bent verantwoordelijk voor je eigen data.
+> 🎨 Built using [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) for a clean and modern interface!
 
 ---
 
-## 🧰 Installatie
+## ⚠️ Important
 
-### 📦 Vereisten
+> 🚧 **Work in Progress – Use at your own risk!**  
+> This app is still under development and may contain bugs.  
+> Do **not use it for sensitive or irreplaceable files without a backup.**  
+> Files can be **irreversibly damaged** if unlocking fails or the app crashes.  
+> You are fully responsible for your own data.
+
+---
+
+## 🧰 Installation
+
+### 📦 Requirements
 ```bash
 pip install customtkinter cryptography pillow
