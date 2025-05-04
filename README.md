@@ -42,11 +42,14 @@
 
 ---
 
-## 📸 Screenshot
+## 📸 
+
+ 
+👉 **[imgur.com/a/EknUcvT](https://imgur.com/a/EknUcvT)**
 
 <p align="center">
-  <blockquote class="imgur-embed-pub" lang="en" data-id="a/EknUcvT" data-context="false" ><a href="//imgur.com/a/EknUcvT"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-  <i>Clean, veilig en visueel aantrekkelijk 💻✨</i>
+  <img src="https://i.imgur.com/l6Qb1Vg.png" width="600"><br>
+  <i>Moderne interface met profielondersteuning</i>
 </p>
 
 ---
