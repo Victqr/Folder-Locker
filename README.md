@@ -42,14 +42,6 @@
 
 ---
 
-
-<p align="center">
-  <img src="https://i.imgur.com/l6Qb1Vg.png" width="600"><br>
-  <i>Moderne interface met profielondersteuning</i>
-</p>
-
----
-
 ## 🧰 Installatie
 
 ### 📦 Vereisten
